@@ -27,7 +27,7 @@ a {
 .signup-btn {
   margin-left: 25px;
   margin-right: 50px;
-  background: #1977cc;
+  background: #00adef;
   color: #fff;
   border-radius: 50px;
   padding: 8px 25px;
@@ -39,7 +39,7 @@ a {
 
 .login-btn {
   margin-left: 25px;
-  background: #1977cc;
+  background: #00adef;
   color: #fff;
   border-radius: 50px;
   padding: 8px 25px;
@@ -57,7 +57,7 @@ a {
 }
 
 .form-buttons {
-  background: #1977cc;
+  background: #00adef;
   color: #fff;
   border-radius: 50px;
   padding: 8px 25px;
