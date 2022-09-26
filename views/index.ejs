@@ -1,50 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diagnose</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/style.css" />
-</head>
-<body>
-    <nav class="navbar navbar-expand-lg bg-white navbar-white">
-        <div class="container">
-                <a class="navbar-brand img-container" href="#">
-                  <img src="https://images-na.ssl-images-amazon.com/images/I/31WvYKMlbYL.__AC_SX300_SY300_QL70_FMwebp_.jpg" alt="Logo" width="100" height="100" class="d-inline-block align-text-top">
-                </a>
-              </div>
-              <nav class="navbar bg-white">
-                <form class="container-fluid justify-content-end">
-                  <a href="/login"><button action="/login" class="btn btn-outline-success" type="button" style="width: 100px;"> Log in</button></a>
-                </form>
-              </nav>
-              <nav class="navbar bg-white">
-                <form class="container-fluid justify-content-end">
-                  <a href="/signup"><button class="btn btn-outline-success" type="button" style="width: 100px;">Sign up </button></a>
-                </form>
-              </nav>
-            </div>
-        </div>
-    </nav>
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-    <section class="bg-white text-dark p-5 text-center text-sm-start p-lg-0 pt-lg-5" id="background">
-        <div class="container">
-            <div class="d-sm-flex align-items-center justify-content-around">
-                <div>
-                    <h1>Collaborate with top medical minds</h1>
-                    <p class="lead my-4">Join the world-renowned Diagnose community today!</p>
-                    <button class="btn btn-success btn-lrg" data-bs-toggle="modal"
-                    data-bs-target="#enroll">Start The Enrollment</button>
-                </div>
-                <img class="img-fluid d-none d-sm-block family-img rounded" src="https://www.news-medical.net/images/Article_Images/ImageForArticle_22572_16533781526443229.jpg" alt="loid forger">
-            </div>
-        </div>
+    <title>Diagnose</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS Files -->
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header id="header" class="fixed-top">
+      <div class="container d-flex align-items-center">
+        <a href="/" class="logo me-auto"
+          ><img
+            src="assets/img/logo.png"
+            alt=""
+            class="img-fluid"
+            style="height: px"
+        /></a>
+        <a href="/login" class="login-btn">Login</a>
+        <a href="/signup" class="signup-btn">Sign Up</a>
+      </div>
+    </header>
+
+    <section id="hero" class="d-flex align-items-center">
+      <div class="container">
+        <h1>Welcome to Diagnose</h1>
+        <h2>
+          Join the worldwide community of medical experts working together for a
+          better future!
+        </h2>
+        <a href="/signup" class="btn-get-started scrollto">Get Started</a>
+      </div>
     </section>
 
-    
+    <section id="why-us" class="why-us">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 d-flex align-items-stretch">
+            <div class="content">
+              <h3>Our Mission:</h3>
+              <p>
+                Our goal is to bring the medical community together in the act
+                of recognizing a disease from its signs and symptoms.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-8 d-flex align-items-stretch">
+            <div class="icon-boxes d-flex flex-column justify-content-center">
+              <div class="row">
+                <div class="col-xl-4 d-flex align-items-stretch">
+                  <div class="icon-box mt-4 mt-xl-0">
+                    <i class="bx bx-images"></i>
+                    <h4>Share images of symptoms</h4>
+                    <p>
+                      After creating an account, you can share an image of your
+                      patient's symptoms.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-xl-4 d-flex align-items-stretch">
+                  <div class="icon-box mt-4 mt-xl-0">
+                    <i class="bx bx-receipt"></i>
+                    <h4>Get diagnosed!</h4>
+                    <p>Medical experts around the world commenting</p>
+                  </div>
+                </div>
+                <div class="col-xl-4 d-flex align-items-stretch">
+                  <div class="icon-box mt-4 mt-xl-0">
+                    <i class="bx bx-cube-alt"></i>
+                    <h4>Labore consequatur</h4>
+                    <p>
+                      Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut
+                      maiores omnis facere
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
-</body>
+    <footer class="text-center">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Diagnose</span></strong
+        >. All Rights Reserved
+      </div>
+      <div class="credits">
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </footer>
+  </body>
 </html>

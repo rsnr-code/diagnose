@@ -8,3 +8,12 @@ exports.getSignup = (req, res) => {
       title: "Create Account",
     });
   };
+
+  exports.getLogin = (req, res) => {
+    if (req.user) {
+      return res.redirect("/profile");
+    }
+    res.render("login", {
+      title: "Login",
+    });
+  };
