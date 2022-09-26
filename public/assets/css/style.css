@@ -8,6 +8,47 @@ a {
   text-decoration: none;
 }
 
+.navbar {
+  padding: 0;
+}
+
+.navbar ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.navbar>ul>li {
+  position: relative;
+  white-space: nowrap;
+  padding: 8px 0 8px 20px;
+}
+
+.navbar a,
+.navbar a:focus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 15px;
+  color: #2c4964;
+  white-space: nowrap;
+  transition: 0.3s;
+  border-bottom: 2px solid #fff;
+  padding: 5px 2px;
+}
+
+
+.navbar a:hover,
+.navbar .active,
+.navbar .active:focus,
+.navbar li:hover>a {
+  color: #1977cc;
+  border-color: #1977cc;
+}
+
+
 
 #header {
   background: #fff;
@@ -17,7 +58,7 @@ a {
 }
 
 #header .logo img {
-  max-height: 80px;
+  max-height: 55px;
   margin-left: 50px;
 }
 
@@ -189,11 +230,15 @@ section {
 }
 
 .login-page {
-  margin-top: 100px;
+  margin-top: 125px;
   width: 600px;
   height: 400px;
 }
 
 .signup-page{
   margin-top: 100px;
+}
+
+.credits {
+  font-size: 10px;
 }
