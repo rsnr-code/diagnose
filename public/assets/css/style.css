@@ -242,3 +242,8 @@ section {
 .credits {
   font-size: 10px;
 }
+
+.feed-images {
+  max-width: 600px;
+  max-height: 600px;
+}

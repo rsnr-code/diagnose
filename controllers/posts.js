@@ -3,13 +3,13 @@ const Post = require("../models/Post");
 
 module.exports = {
   getFeed: async (req, res) => {
-        try {
-          
-          res.render("feed");
-        } catch (err) {
-          console.log(err);
-        }
-},
+    try {
+      const posts = await Post.find().populate("user").sort({ createdAt: "desc" }).lean();
+      res.render("feed", { posts: posts});
+    } catch (err) {
+      console.log(err);
+    }
+  },
 
   getCreate: async (req, res) => {
       try {
@@ -39,6 +39,23 @@ module.exports = {
   }
 },
 
+getPost: async (req, res) => {
+  try {
+    const post = await Post.findById(req.params.id);
+    res.render("post", { post: post, user: req.user });
+  } catch (err) {
+    console.log(err);
+  }
+},
+
+getProfile: async (req, res) => {
+  try {
+    const posts = await Post.find({ user: req.user.id });
+    res.render("profile", { posts: posts, user: req.user });
+  } catch (err) {
+    console.log(err);
+  }
+},
 
 
 }

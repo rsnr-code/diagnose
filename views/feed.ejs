@@ -3,12 +3,23 @@
 <%- include('partials/header') -%>
 
 <section>
-<div class="container">
 
-<p class="title">FEED</p>
+    <div class="container">
+    
+          <ul class="list-unstyled text-center ">
+            <% for(var i=0; i<posts.length; i++) {%>
+              <li class="mt-5">
+                <h4> <%= posts[i].user.userName%> </h4>
+                <a href="/post/<%= posts[i]._id%>">
+                  <img class="img-fluid feed-images" src="<%= posts[i].image%>">
+                </a>
+              </li>
+              <span><%= posts[i].caption%></span>
+            <% } %>
+            </ul>
+        </div>
+    
 
-
-</div>
 </section>
 
 

@@ -11,7 +11,7 @@ const methodOverride = require("method-override");
 
 
 const mainRoutes = require("./routes/main");
-const postRoutes = require('./routes/posts')
+const postRoutes = require("./routes/posts");
 
 
 //Use .env file in config folder
@@ -60,7 +60,7 @@ app.use(flash());
 
 //Setup Routes For Which The Server Is Listening
 app.use("/", mainRoutes);
-app.use("/posts", postRoutes);
+app.use("/post", postRoutes);
 
 app.listen(process.env.PORT, () => {
     console.log(`Server is running on PORT ${process.env.PORT}`)
