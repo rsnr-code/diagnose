@@ -10,4 +10,6 @@ router.get("/:id", ensureAuth, postsController.getPost);
 
 router.post("/createPost", upload.single("file"), postsController.createPost);
 
+
+
 module.exports = router;

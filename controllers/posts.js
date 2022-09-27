@@ -57,5 +57,22 @@ getProfile: async (req, res) => {
   }
 },
 
+// getUserPage: async (req, res) => {
+//   try {
+//     const posts = await Post.find({
+//       user: req.params.userId,
+//     })
+//     .populate("user")
+//         .lean();
 
-}
+//     res.render("userpage", {
+//       posts,
+//       user: req.params.userId
+//     });
+
+//   } catch (err) {
+//     console.error(err);
+    
+//   }
+// },
+};
