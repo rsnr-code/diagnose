@@ -13,7 +13,6 @@ module.exports = {
 
   getCreate: async (req, res) => {
       try {
-    
       res.render("create");
     } catch (err) {
     console.log(err);
