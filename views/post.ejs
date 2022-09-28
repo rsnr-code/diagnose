@@ -29,8 +29,35 @@
     <div class="col-3 mt-5">
       <p><%= post.caption %></p>
     </div>
+
     
+      <ul class="list-unstyled text-center ">
+        <% for(var i=0; i<comment.length; i++) {%>
+          <li class="mt-5">
+            <span> <%= comment[i].body %> </span> 
+          </li>
+        <% } %>
+        </ul>
+   
+
   </div>
-</div>
+
+  <div class="container d-flex justify-content-center">
+    <form action="/post/<%= post._id %>" method="POST" class="col-2 mt-5">
+
+      <div class="">
+          <div class="input-field">
+              <h5>Comment:</h5>
+              <textarea id="body" name="body"></textarea>
+          </div>
+      </div>
+  
+      <div class="">
+          <input type="submit" value="Submit" class="btn">
+      </div>
+  </form>
+  
+  </div>
+  
 
 <%- include('partials/footer') -%>

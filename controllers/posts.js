@@ -1,5 +1,7 @@
 const cloudinary = require("../middleware/cloudinary");
 const Post = require("../models/Post");
+const Comment = require('../models/Comment');
+const User = require('../models/User');
 
 module.exports = {
   getFeed: async (req, res) => {
@@ -42,7 +44,8 @@ module.exports = {
 getPost: async (req, res) => {
   try {
     const post = await Post.findById(req.params.id);
-    res.render("post", { post: post, user: req.user });
+    const comment = await Comment.find({post: req.params.id}).populate("user").sort({ createdAt: "desc" }).lean();
+    res.render("post", { post: post, user: req.user, comment: comment });
   } catch (err) {
     console.log(err);
   }
@@ -51,7 +54,9 @@ getPost: async (req, res) => {
 getProfile: async (req, res) => {
   try {
     const posts = await Post.find({ user: req.user.id });
+    
     res.render("profile", { posts: posts, user: req.user });
+    
   } catch (err) {
     console.log(err);
   }
@@ -62,12 +67,13 @@ getUserPage: async (req, res) => {
     const posts = await Post.find({
       user: req.params.userId,
     })
-    .populate("user")
-    .lean();
 
+    const user = await User.find({_id: req.params.userId})
+    console.log(user)
+  
     res.render("profile", {
       posts,
-      user: req.params.userId,
+      user: req.user,
     });
 
   } catch (err) {
@@ -102,6 +108,19 @@ deletePost: async (req, res) => {
     res.redirect("/feed");
   } catch (err) {
     res.redirect("/feed");
+  }
+},
+
+createComment: async (req, res) => {
+  try {
+   await Comment.create({
+      body: req.body.body,
+      user: req.user.id,
+      post: req.params.id
+    });
+    res.redirect(`/post/${req.params.id}`);
+  } catch (err) {
+    console.error(err);
   }
 },
 };
