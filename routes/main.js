@@ -10,7 +10,7 @@ router.get("/feed", ensureAuth, postsController.getFeed);
 
 router.get("/profile", ensureAuth, postsController.getProfile);
 
-// router.get("/profile/:userId", ensureAuth, postsController.getUserPage);
+router.get("/profile/:userId", ensureAuth, postsController.getUserPage);
 
 router.get("/login", ensureGuest, authController.getLogin);
 router.post("/login", authController.postLogin);
