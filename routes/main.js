@@ -10,6 +10,8 @@ router.get("/feed", ensureAuth, postsController.getFeed);
 
 router.get("/profile", ensureAuth, postsController.getProfile);
 
+router.get("/bookmark", ensureAuth, postsController.getBookmark);
+
 router.get("/user/:userId", ensureAuth, postsController.getUserPage);
 
 router.get("/login", ensureGuest, authController.getLogin);

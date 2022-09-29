@@ -17,6 +17,14 @@ module.exports = {
     }
   },
 
+  getBookmark: async (req, res) => {
+    try {
+      res.render("bookmark");
+    } catch (err) {
+      console.log(err);
+    }
+  },
+
   getCreate: async (req, res) => {
       try {
       res.render("create");
