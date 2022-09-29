@@ -58,7 +58,7 @@ getPost: async (req, res) => {
 getProfile: async (req, res) => {
   try {
     const posts = await Post.find({ user: req.user.id });
-    const comments = await Comment.find({user: req.params.userId}).sort({ createdAt: "desc" })
+    const comments = await Comment.find({user: req.user.id}).sort({ createdAt: "desc" })
     
     res.render("profile", { posts: posts, user: req.user, comments,
       formatDate });
