@@ -3,6 +3,10 @@ const Post = require("../models/Post");
 const Comment = require('../models/Comment');
 const User = require('../models/User');
 
+const {
+  formatDate
+} = require("../helpers/ejs");
+
 module.exports = {
   getFeed: async (req, res) => {
     try {
@@ -45,7 +49,7 @@ getPost: async (req, res) => {
   try {
     const post = await Post.findById(req.params.id);
     const comment = await Comment.find({post: req.params.id}).populate("user").sort({ createdAt: "desc" }).lean();
-    res.render("post", { post: post, user: req.user, comment: comment });
+    res.render("post", { post: post, user: req.user, comment: comment, formatDate });
   } catch (err) {
     console.log(err);
   }
@@ -54,8 +58,10 @@ getPost: async (req, res) => {
 getProfile: async (req, res) => {
   try {
     const posts = await Post.find({ user: req.user.id });
+    const comments = await Comment.find({user: req.params.userId}).sort({ createdAt: "desc" })
     
-    res.render("profile", { posts: posts, user: req.user });
+    res.render("profile", { posts: posts, user: req.user, comments,
+      formatDate });
     
   } catch (err) {
     console.log(err);
@@ -64,16 +70,16 @@ getProfile: async (req, res) => {
 
 getUserPage: async (req, res) => {
   try {
-    const posts = await Post.find({
-      user: req.params.userId,
-    })
+    const posts = await Post.find( {user: req.params.userId} ).populate("user").lean();
+    const user = await User.findById(req.params.userId)
+    const comments = await Comment.find({user: req.params.userId}).sort({ createdAt: "desc" })
 
-    const user = await User.find({_id: req.params.userId})
     console.log(user)
-  
     res.render("profile", {
       posts,
-      user: req.user,
+      user,
+      comments,
+      formatDate
     });
 
   } catch (err) {
