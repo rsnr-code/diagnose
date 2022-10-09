@@ -3,18 +3,21 @@
 
         <div class="container-fluid mt-5">
           <div class="row">
-            <div class="col-xl-6 col-lg-6 col-md-6" style="border:1px solid 
+            <div class="col-xl-6 col-lg-6 col-md-6 card" style="border:1px solid 
         #ddd">
               <img src="<%= post.image%>" alt="responsive webite" class="img-fluid">
-              <div class="row justify-content-between">
+
+              <div class="d-flex justify-content-between card-footer">
                 <form
                   class="col-1"
                   action="/post/likePost/<%= post.id %>?_method=PUT"
                   method="POST"
                 >
-                <button class="btn btn-block btn-primary"><i class="fa fa-thumbs-up">Like</i> </button>
+                <button class="btn fs-4 justify-content-between" style="color: #04a9e9"><i class="bi bi-hand-thumbs-up"></i></button>
                 </form>
-                <h3 class="col-3">Likes: <%= post.likes %></h3>
+
+                <h3>Likes: <%= post.likes %></h3>
+
                 <%if(post.user == user.id){ %>
                 <form
                   action="/post/deletePost/<%= post.id %>?_method=DELETE"
@@ -26,6 +29,7 @@
                 <%}%>
               </div>
             </div>
+            
             <div class="col-xl-6 col-lg-6 col-md-6" style="border:1px solid 
         #ddd">
               <h2><%= post.caption %></h2>
