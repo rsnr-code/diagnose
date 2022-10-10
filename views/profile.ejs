@@ -1,41 +1,49 @@
 <%- include('partials/header') -%>
 
 
-<div class="mt-5">
-        <h1><%=user.userName%>'s Profile</h1>
-
-        <img src="<%= user.image%>" alt="profile picture" class="img-fluid">
-
+    <div class="mt-5">
+        <div class=" card" style="border: none;">
+    <div class="card-footer text-center">
+      <p style="margin-top: 10px; font-weight: bold; font-size: 1.5rem;" ><%=user.userName%></p>
     </div>
 
-    <div class="container-fluid mt-5 d-flex">
+    <div class="container-fluid">
       <div class="row">
-        <div class="col-xl-10">
+        
+        <div class="col card-footer">
+          <p class="lead text-center">Posts</p>
 
-            <ul class="list-unstyled">
-              <h2>Cases</h2>
+
+            <div class="text-center">
+             
+
+              <ul class="list-unstyled scroll" style="max-height: 500px;">
               <% for(var i=0; i<posts.length; i++) {%>
-                <li class="col-8 justify-content-between mt-5">
-                  <a href="/post/<%= posts[i]._id%>">
-                    <img class="img-fluid rounded" src="<%= posts[i].image%>">
-                  </a>
-                </li>
+                <li class="mt-5 ">
+        
+                <a href="/post/<%= posts[i]._id%>">
+                        <img class="img-fluid rounded text-center" src="<%= posts[i].image%>" >
+                      </img></a>
+                      <p><%= posts[i].caption%></p>
+                   
+                    </li>
+                    <% } %>
+                    </ul>
+                      
                
-              <% } %>
-              </ul>
-            
-
-
-
+            </div>
           </div>
-        </div>
-        <div class="col-xl-6 col-lg-6 col-md-6">
-          <h2>Comments</h2>
+   
+
+
+        
+        <div class="col card-footer scroll">
+          <p class="lead text-center">Comments</p>
            
-          <ul class="list-unstyled text-center ">
+          <ul class="list-unstyled">
             <% for(var i=0; i<comments.length; i++) {%>
-              <li class="mt-5 row">
-                <span class="lead"> <a href="/post/<%=comments[i].post%>">"<%= comments[i].body %>" </a> </span> 
+              <li class="mt-5 ">
+                <span > <a href="/post/<%=comments[i].post%>">"<%= comments[i].body %>" </a> </span> 
                 <span class="font-italic"> <%= formatDate(comments[i].createdAt, 'Do MMMM, YYYY') %></span>
               </li>
             <% } %>
