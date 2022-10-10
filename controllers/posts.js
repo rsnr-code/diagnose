@@ -57,7 +57,7 @@ module.exports = {
 
 getPost: async (req, res) => {
   try {
-    const post = await Post.findById(req.params.id);
+    const post = await Post.findById(req.params.id).populate("user").lean();
     const comment = await Comment.find({post: req.params.id}).populate("user").sort({ createdAt: "desc" }).lean();
     res.render("post", { post: post, user: req.user, comment: comment, formatDate });
   } catch (err) {
@@ -84,7 +84,6 @@ getUserPage: async (req, res) => {
     const user = await User.findById(req.params.userId)
     const comments = await Comment.find({user: req.params.userId}).sort({ createdAt: "desc" })
 
-    console.log(user)
     res.render("profile", {
       posts,
       user,

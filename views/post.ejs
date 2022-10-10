@@ -3,67 +3,96 @@
 
         <div class="container-fluid mt-5">
           <div class="row">
-            <div class="col-xl-6 col-lg-6 col-md-6 card" style="border:1px solid 
-        #ddd">
+            <div class="col-xl-6 col-lg-6 col-md-6 card" style="border: none;">
+        <div class="card-footer d-flex justify-content-between">
+          <div class="mb-2 d-flex">
+            <a href="/user/<%= post.user._id%>"><i class="bi bi-person-square fs-4 mx-2" style="color: #04a9e9"></i></a>
+          <a href="/user/<%= post.user._id%>" style="margin-top: 10px; color: black;"><p><%=post.user.userName%></p></a> 
+          </div>
+          <a>
+            <i class="bi bi-bookmark-plus-fill fs-4" style="color: #04a9e9"></i>
+          </a>
+        </div>
+
               <img src="<%= post.image%>" alt="responsive webite" class="img-fluid">
 
-              <div class="d-flex justify-content-between card-footer">
-                <form
-                  class="col-1"
-                  action="/post/likePost/<%= post.id %>?_method=PUT"
+<div class="card-footer d-flex justify-content-between" style="height: 2.5rem;">
+  <div class="d-flex">
+    <form
+                  action="/post/likePost/<%= post._id %>?_method=PUT"
                   method="POST"
                 >
-                <button class="btn fs-4 justify-content-between" style="color: #04a9e9"><i class="bi bi-hand-thumbs-up"></i></button>
+                
+                <button class="btn">
+                <i class="bi bi-heart-fill" style="color: red;"></i>  <%= post.likes %></button>
                 </form>
 
-                <h3>Likes: <%= post.likes %></h3>
+                <%if(post.user._id == user.id){ %>
+                  <form
+                    action="/post/deletePost/<%= post._id %>?_method=DELETE"
+                    method="POST"
+                    class="col-3"
+                  >
+                    <button class="btn">
+                      🗑️</button>
+                  </form>
+                  <%}%>
 
-                <%if(post.user == user.id){ %>
-                <form
-                  action="/post/deletePost/<%= post.id %>?_method=DELETE"
-                  method="POST"
-                  class="col-3"
-                >
-                  <button class="btn btn-primary fa fa-trash" type="submit">Delete</button>
-                </form>
-                <%}%>
-              </div>
-            </div>
+
+  </div>
+  
+
+  <div class="d-flex">
+    <p>  <%= comment.length %> Comments </p>
+    <p>  15 Bookmarks</p>
+  </div>
+  
+</div>
+</div>
             
-            <div class="col-xl-6 col-lg-6 col-md-6" style="border:1px solid 
-        #ddd">
-              <h2><%= post.caption %></h2>
-              <ul class="list-unstyled text-center ">
+            <div class="col-xl-6 col-lg-6 col-md-6 card" style="border: none;">
+              <div class="card-footer">
+                <%= post.caption %>
+              </div>
+
+              <div class="scroll">
+                <ul class="list-unstyled text-center ">
                 <% for(var i=0; i<comment.length; i++) {%>
                   <li class="mt-5 row">
-                    <span class="lead"> "<%= comment[i].body %>" </span> 
+                    <p> "<%= comment[i].body %>" </p> 
                     <span class="font-weight-light"> by: <%= comment[i].user.userName %></span>
                     <span class="font-italic"> <%= formatDate(comment[i].createdAt, 'Do MMMM, YYYY') %></span>
                   </li>
                 <% } %>
                 </ul>
+              </div>
+            
+
+                <div class="card-footer">
+                  <form action="/post/<%= post._id %>" method="POST">
+              
+                    <div class="">
+                        <div class="input-field">
+                            <p>Comment:</p>
+                            <textarea id="body" name="body" style="min-width: 500px;"></textarea>
+                        </div>
+                    </div>
+                
+                    <div class="">
+                        <input type="submit" value="Submit" class="btn">
+                    </div>
+                </form>
+                
+                </div>
             </div>
+
+
+          
+
           </div>
         </div>
   </div>
   
-
-  <div class="container d-flex justify-content-center">
-    <form action="/post/<%= post._id %>" method="POST" class="col-2 mt-5">
-
-      <div class="">
-          <div class="input-field">
-              <h5>Comment:</h5>
-              <textarea id="body" name="body"></textarea>
-          </div>
-      </div>
-  
-      <div class="">
-          <input type="submit" value="Submit" class="btn">
-      </div>
-  </form>
-  
-  </div>
   
 
 <%- include('partials/footer') -%>
