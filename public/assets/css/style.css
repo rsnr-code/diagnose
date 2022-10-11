@@ -244,7 +244,7 @@ section {
 }
 
 .scroll {
-  max-height: 600px;
+  max-height: 500px;
   overflow-y: auto;
   overflow-x: hidden;
 }
@@ -266,9 +266,19 @@ right: 35px;
 
 div.stickyyy {
   position: fixed;
-  top: 550px;
-  left: 35px;
+  top: 525px;
+  right: 35px;
+  background-color: #00adef;
+  width: 18rem;
+
   }
+
+  div.stickyyy:hover {
+    background-color: #166ab5;
+    
+  }
+  
+
 
 .icon {
   color: #04a9e9

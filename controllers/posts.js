@@ -61,7 +61,7 @@ module.exports = {
 getPost: async (req, res) => {
   try {
     const post = await Post.findById(req.params.id).populate("user").lean();
-    const comment = await Comment.find({post: req.params.id}).populate("user").sort({ createdAt: "desc" }).lean();
+    const comment = await Comment.find({post: req.params.id}).populate("user").sort({ createdAt: "asc" }).lean();
     const bookmark = await Bookmark.find({post: req.params.id})
     res.render("post", { post: post, user: req.user, comment: comment, formatDate, bookmark });
   } catch (err) {
