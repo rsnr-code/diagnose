@@ -253,3 +253,24 @@ section {
   overflow-x: hidden;
 }
 
+div.sticky {
+
+  position: fixed;
+  left: 35px;
+  padding: 5px;
+
+}
+
+div.stickyy {
+position: fixed;
+top: 145px;
+right: 35px;
+}
+
+
+div.stickyyy {
+  position: fixed;
+  top: 550px;
+  left: 35px;
+  }
+

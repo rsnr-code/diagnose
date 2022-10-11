@@ -43,8 +43,9 @@
           <ul class="list-unstyled">
             <% for(var i=0; i<comments.length; i++) {%>
               <li class="mt-5 ">
-                <span > <a href="/post/<%=comments[i].post%>">"<%= comments[i].body %>" </a> </span> 
-                <span class="font-italic"> <%= formatDate(comments[i].createdAt, 'Do MMMM, YYYY') %></span>
+                <span > <a href="/post/<%=comments[i].post%>"><%= comments[i].body %> </a> </span> 
+               
+                <p class="font-italic"> <%= moment(comments[i].createdAt, "YYYYMMDD").fromNow() %></p>
               </li>
             <% } %>
             </ul>

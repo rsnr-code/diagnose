@@ -2,6 +2,19 @@
 
 <section>
 
+  
+  <div class="card sticky mt-4 text-center" style="width: 18rem;">
+    <img class="card-img-top rounded-circle w-75 mx-auto" src="/assets/img/doctors/doc.jpg" alt="Profile Picture">
+    <div class="card-body">
+      <h5 class="card-title">Update your profile!</h5>
+      <p class="card-text">Personalize your profile by adding a profile picture</p>
+      <a href="#" class="btn" style="background-color: #00adef; color: white;">Coming Soon</a>
+    </div>
+  </div>   
+  
+
+ 
+
                 <% for(let i=0; i<posts.length; i++) {%>
                 <div class="card  text-center mt-4 mx-auto" style="max-width: 501px;">
 
@@ -9,7 +22,7 @@
                     <div class="mb-2">
                       <a href="/user/<%= posts[i].user._id%>"><i class="bi bi-person-square fs-4 mx-2" style="color: #04a9e9"></i></a>
                       
-                      <a href="/user/<%= posts[i].user._id%>" style="color: black"><%= posts[i].user.userName%> </a>
+                      <a href="/user/<%= posts[i].user._id%>" style="color: black"><strong><%= posts[i].user.userName%> </strong></a>
                     </div>
                     
                     
@@ -35,7 +48,40 @@
       
                 <% } %>
 
-               
+
+
+
+                <a style="color: white;" href="/create"><div class="card stickyyy text-center text-white" style="width: 18rem; background-color: #00adef">
+                  <div class="card-header">Post a case</div>
+                  </div></a>
+
+
+<div class="card stickyy text-center">
+<div class="well text-center d-flex" style="width: 18rem">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <a href="#"><img src="/assets/img/doctors/doc2.jpg" alt="inn_logo" class="img-fluid rounded-circle w-75"></a>
+                      </div>
+                      <div class="col-md-6">
+                        <a href="#"><img src="/assets/img/doctors/doc3.jpg" alt="ccs_logo" class="img-fluid rounded-circle w-75"></a>
+                      </div>
+                      <div class="col-md-6">
+                        <a href="#"><img src="/assets/img/doctors/doc4.jpg" alt="ccs_logo" class="img-fluid rounded-circle w-75"></a>
+                      </div>
+                      <div class="col-md-6">
+                        <a href="#"><img src="/assets/img/doctors/doc.jpg" alt="ccs_logo" class="img-fluid rounded-circle w-75"></a>
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title">Join a group!</h5>
+                        <p class="card-text">Collaborate with fellow experts</p>
+                        <a href="#" class="btn" style="background-color: #00adef; color: white;">Coming Soon</a>
+                      </div>
+                    </div>
+                  </div>
+</div>
+                  
+
+
 
 </section>
 

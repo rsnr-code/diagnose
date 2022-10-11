@@ -64,7 +64,8 @@
                 <ul class="list-unstyled  ">
                 <% for(var i=0; i<comment.length; i++) {%>
                   <li class="mt-5 row">
-                    <p class="font-weight-light"><strong><%= comment[i].user.userName %></strong> | <em><%= formatDate(comment[i].createdAt, 'Do MMMM, YYYY') %> </em></p>
+                    <a href="/user/<%= comment[i].user._id%>"><p class="font-weight-light"><strong style="color: black"><%= comment[i].user.userName %></strong></a> |
+                    <em><%= formatDate(comment[i].createdAt, 'Do MMMM, YYYY') %> </em></p>
                     <p> <%= comment[i].body %> </p> 
                     
                     
