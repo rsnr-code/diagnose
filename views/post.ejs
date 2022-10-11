@@ -9,10 +9,14 @@
             <a href="/user/<%= post.user._id%>"><i class="bi bi-person-square fs-4 mx-2" style="color: #04a9e9"></i></a>
           <a href="/user/<%= post.user._id%>" style="margin-top: 10px; color: black;"><p><%=post.user.userName%></p></a> 
           </div>
-          <a>
-            <i class="bi bi-bookmark-plus-fill fs-4" style="color: #04a9e9"></i>
-          </a>
+          <form action="/post/bookmarkPost/<%= post._id %>" method="POST">
+            <button class="btn">
+             <i class="bi bi-bookmark-plus-fill fs-4" style="color: #04a9e9"></i> 
+            </button>
+          </form>
         </div>
+
+        
 
               <img src="<%= post.image%>" alt="responsive webite" class="img-fluid">
 
@@ -44,7 +48,7 @@
 
   <div class="d-flex">
     <p>  <%= comment.length %> Comments </p>
-    <p>  15 Bookmarks</p>
+    <p>  <%= bookmark.length %> Bookmarks</p>
   </div>
   
 </div>

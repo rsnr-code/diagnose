@@ -2,6 +2,7 @@ const cloudinary = require("../middleware/cloudinary");
 const Post = require("../models/Post");
 const Comment = require('../models/Comment');
 const User = require('../models/User');
+const Bookmark = require('../models/Bookmark');
 const moment = require('moment')
 
 const {
@@ -21,7 +22,10 @@ module.exports = {
 
   getBookmark: async (req, res) => {
     try {
-      res.render("bookmark");
+      const bookmarks = await Bookmark.find({user: req.user.id}).populate("post").lean();
+      const post = await Post.find().populate("user")
+      
+      res.render("bookmark", {bookmarks: bookmarks, moment, post});
     } catch (err) {
       console.log(err);
     }
@@ -59,7 +63,8 @@ getPost: async (req, res) => {
   try {
     const post = await Post.findById(req.params.id).populate("user").lean();
     const comment = await Comment.find({post: req.params.id}).populate("user").sort({ createdAt: "desc" }).lean();
-    res.render("post", { post: post, user: req.user, comment: comment, formatDate });
+    const bookmark = await Bookmark.find({post: req.params.id})
+    res.render("post", { post: post, user: req.user, comment: comment, formatDate, bookmark });
   } catch (err) {
     console.log(err);
   }
@@ -111,6 +116,25 @@ likePost: async (req, res) => {
     console.log(err);
   }
 },
+
+bookmarkPost: async (req, res) => {
+  try {
+    const post = await Post.findById(req.params.id);
+
+    await Bookmark.create({
+      post: post,
+      user: req.user.id,
+    });
+
+    console.log("Bookmarked!");
+    res.redirect('back');
+
+  } catch (err) {
+    console.log(err);
+  }
+},
+
+
 deletePost: async (req, res) => {
   try {
     // Find post by id

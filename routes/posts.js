@@ -12,6 +12,8 @@ router.post("/createPost", upload.single("file"), postsController.createPost);
 
 router.put("/likePost/:id", postsController.likePost);
 
+router.post("/bookmarkPost/:id", postsController.bookmarkPost);
+
 router.delete("/deletePost/:id", postsController.deletePost);
 
 router.post("/:id", postsController.createComment);

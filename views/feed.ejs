@@ -13,9 +13,11 @@
                     </div>
                     
                     
-                    <a>
-                      <i class="bi bi-bookmark-plus-fill fs-4" style="color: #04a9e9"></i>
-                    </a>
+                    <form action="/post/bookmarkPost/<%= posts[i]._id %>" method="POST">
+                      <button class="btn">
+                       <i class="bi bi-bookmark-plus-fill fs-4" style="color: #04a9e9"></i> 
+                      </button>
+                    </form>
                   </div>
                  
                   <a href="/post/<%= posts[i]._id%>">
