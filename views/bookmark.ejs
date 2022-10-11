@@ -8,9 +8,9 @@
             <div class="card text-center" style="max-width: 501px;">
 
                 <div class="card-footer mb-1">
-                    <a href="/user/<%= post[i].user._id%>"><i class="bi bi-person-square fs-4 mx-2" style="color: #04a9e9"></i></a>
+                    <a href="/user/<%= post[i].user._id%>"><i class="bi bi-person-square fs-4 mx-2 icon" ></i></a>
                     
-                    <a href="/user/<%= post[i].user._id%>" style="color: black"><%= post[i].user.userName%> </a>
+                    <a href="/user/<%= post[i].user._id%>" style="color: black"><strong><%= post[i].user.userName%></strong> </a>
                   </div>
                   <a href="/post/<%= bookmarks[i].post._id%>"><img style="height: 600px; width: 500px;" src="<%= bookmarks[i].post.image%>"></a>
              

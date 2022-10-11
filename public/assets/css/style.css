@@ -274,3 +274,12 @@ div.stickyyy {
   left: 35px;
   }
 
+.icon {
+  color: #04a9e9
+
+}
+
+.icon:hover {
+  color: #166ab5;
+  
+}
