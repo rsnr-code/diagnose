@@ -20,7 +20,7 @@
 
               <img src="<%= post.image%>" alt="responsive webite" class="img-fluid">
 
-<div class="card-footer d-flex justify-content-between" style="height: 2.5rem;">
+<div class="card-footer d-flex justify-content-between" style="height: 4rem;">
   <div class="d-flex">
     <form
                   action="/post/likePost/<%= post._id %>?_method=PUT"
@@ -28,7 +28,7 @@
                 >
                 
                 <button class="btn">
-                <i class="bi bi-heart-fill" style="color: red;"></i>  <%= post.likes %></button>
+                <i class="bi bi-hand-thumbs-up-fill fs-4 icon" ></i>  <%= post.likes %></button>
                 </form>
 
                 <%if(post.user._id == user.id){ %>
@@ -37,7 +37,7 @@
                     method="POST"
                     class="col-3"
                   >
-                    <button class="btn">
+                    <button class="btn mt-2">
                       🗑️</button>
                   </form>
                   <%}%>
@@ -46,9 +46,9 @@
   </div>
   
 
-  <div class="d-flex">
-    <p>  <%= comment.length %> Comments </p>
-    <p>  <%= bookmark.length %> Bookmarks</p>
+  <div class="d-flex mt-3">
+    <p>  <%= comment.length %> <em>comments</em> | <%= bookmark.length %> <em>bookmarks</em></p>
+  
   </div>
   
 </div>
