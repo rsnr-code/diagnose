@@ -45,7 +45,6 @@ module.exports = {
     const result = await cloudinary.uploader.upload(req.file.path);
 
     await Post.create({
-      title: req.body.title,
       image: result.secure_url,
       cloudinaryId: result.public_id,
       caption: req.body.caption,
