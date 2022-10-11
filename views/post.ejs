@@ -7,7 +7,7 @@
         <div class="card-footer d-flex justify-content-between">
           <div class="mb-2 d-flex">
             <a href="/user/<%= post.user._id%>"><i class="bi bi-person-square fs-4 mx-2" style="color: #04a9e9"></i></a>
-          <a href="/user/<%= post.user._id%>" style="margin-top: 10px; color: black;"><p><%=post.user.userName%></p></a> 
+          <a href="/user/<%= post.user._id%>" style="margin-top: 10px; color: black;"><p><strong><%=post.user.userName%></strong></p></a> 
           </div>
           <form action="/post/bookmarkPost/<%= post._id %>" method="POST">
             <button class="btn">
@@ -55,17 +55,19 @@
 </div>
             
             <div class="col-xl-6 col-lg-6 col-md-6 card" style="border: none;">
-              <div class="card-footer">
-                <%= post.caption %>
+              <div class="card-footer" style="min-height:75px">
+                <p style="margin-bottom: 2px;"><strong>Case Description </strong></p>
+                <span><%= post.caption %></span>
               </div>
 
               <div class="scroll">
-                <ul class="list-unstyled text-center ">
+                <ul class="list-unstyled  ">
                 <% for(var i=0; i<comment.length; i++) {%>
                   <li class="mt-5 row">
-                    <p> "<%= comment[i].body %>" </p> 
-                    <span class="font-weight-light"> by: <%= comment[i].user.userName %></span>
-                    <span class="font-italic"> <%= formatDate(comment[i].createdAt, 'Do MMMM, YYYY') %></span>
+                    <p class="font-weight-light"><strong><%= comment[i].user.userName %></strong> | <em><%= formatDate(comment[i].createdAt, 'Do MMMM, YYYY') %> </em></p>
+                    <p> <%= comment[i].body %> </p> 
+                    
+                    
                   </li>
                 <% } %>
                 </ul>
