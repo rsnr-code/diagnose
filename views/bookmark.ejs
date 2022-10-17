@@ -1,18 +1,18 @@
 <%- include('partials/header') -%>
 
-<div class="container">
-    <div class="row justify-content-center mt-5">
+<div class="container" style="margin: 0 auto;">
+    <div class="row justify-content-center mt-5 mx-auto">
       <ul class="row list-unstyled">
         <% for(let i=0; i<bookmarks.length; i++) {%>
           <li class="col-6 justify-content-between mt-5">
-            <div class="card text-center" style="max-width: 501px;">
+            <div class="card text-center" style="max-width: 401px;">
 
                 <div class="card-footer mb-1">
                     <a href="/user/<%= post[i].user._id%>"><i class="bi bi-person-square fs-4 mx-2 icon" ></i></a>
                     
                     <a href="/user/<%= post[i].user._id%>" style="color: black"><strong><%= post[i].user.userName%></strong> </a>
                   </div>
-                  <a href="/post/<%= bookmarks[i].post._id%>"><img style="height: 600px; width: 500px;" src="<%= bookmarks[i].post.image%>"></a>
+                  <a href="/post/<%= bookmarks[i].post._id%>"><img style="height: 300px; object-fit: cover; width: 400px;" src="<%= bookmarks[i].post.image%>"></a>
              
              
               </div>
@@ -21,7 +21,7 @@
         </ul>
 
         <% if(bookmarks.length == 0){ %>
-          <div class="mt-4 text-center" style="margin-bottom: 400px">
+          <div class="mt-4 text-center" style="">
             <p><em>You have no bookmarks!</em></p>
           </div>
        <% } %>
