@@ -1,4 +1,3 @@
-
 body {
   font-family: "Raleway", sans-serif;
   color: #444444;
@@ -29,7 +28,7 @@ a {
   align-items: center;
 }
 
-.navbar>ul>li {
+.navbar > ul > li {
   position: relative;
   white-space: nowrap;
   padding: 8px 0 8px 20px;
@@ -48,16 +47,13 @@ a {
   padding: 5px 2px;
 }
 
-
 .navbar a:hover,
 .navbar .active,
 .navbar .active:focus,
-.navbar li:hover>a {
+.navbar li:hover > a {
   color: #1977cc;
   border-color: #1977cc;
 }
-
-
 
 #header {
   background: #fff;
@@ -71,9 +67,6 @@ a {
   margin-left: 50px;
 }
 
-/**
-* Buttons *
-*/
 .signup-btn {
   margin-left: 25px;
   margin-right: 50px;
@@ -100,8 +93,7 @@ a {
 }
 
 .signup-btn:hover,
-.login-btn:hover
- {
+.login-btn:hover {
   background: #166ab5;
   color: #fff;
 }
@@ -118,7 +110,7 @@ a {
   border: none;
 }
 
-.form-buttons:hover{
+.form-buttons:hover {
   background: #166ab5;
   color: white;
 }
@@ -145,7 +137,7 @@ a {
   color: #2c4964;
   margin: 10px 0 0 0;
   font-size: 24px;
-  width: 600px
+  width: 600px;
 }
 
 #hero .btn-get-started {
@@ -232,15 +224,13 @@ section {
   color: #848484;
 }
 
-
-
 .login-page {
   margin-top: 125px;
   width: 600px;
   height: 400px;
 }
 
-.signup-page{
+.signup-page {
   margin-top: 100px;
 }
 
@@ -259,41 +249,24 @@ section {
 }
 
 div.aside-1 {
-
   position: fixed;
-  
-
 }
-/* 
-div.aside-2 {
-position: fixed;
-align-items: left;
-} */
-
 
 div.post-case-btn {
   position: fixed;
   top: 550px;
-  
   background-color: #3291e6;
   width: 18rem;
+}
 
-  }
-
-  div.post-case-btn:hover {
-    background-color: #166ab5;
-    
-  }
-  
-
+div.post-case-btn:hover {
+  background-color: #166ab5;
+}
 
 .icon {
-  color: #04a9e9
-
+  color: #3291e6;
 }
 
 .icon:hover {
   color: #166ab5;
-  
 }
-
