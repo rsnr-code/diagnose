@@ -1,8 +1,8 @@
 <%- include('partials/header') -%>
 
-
+<section>
     <div class="mt-5">
-        <div class=" card" style="border: none;">
+        <div class=" card " style="border: none">
     <div class="card-footer text-center">
       <p style="margin-top: 10px; font-weight: bold; font-size: 1.5rem;" ><%=user.userName%></p>
     </div>
@@ -19,12 +19,12 @@
 
               <ul class="list-unstyled scroll" style="max-height: 500px;">
               <% for(var i=0; i<posts.length; i++) {%>
-                <li class="mt-5 ">
+                <li class="mt-5">
         
                 <a href="/post/<%= posts[i]._id%>">
-                        <img class="img-fluid rounded text-center" src="<%= posts[i].image%>" >
+                        <img class="img-fluid rounded text-center" src="<%= posts[i].image%>" style="max-height: 300px; max-width: 400px; object-fit: cover;">
                       </img></a>
-                      <p><%= posts[i].caption%></p>
+                      <p style="max-width: 400px; margin: 0 auto;"><%= posts[i].caption%></p>
                    
                     </li>
                     <% } %>
@@ -55,5 +55,6 @@
     </div>
 </div>
 
+</section>
 
 <%- include('partials/footer') -%>
