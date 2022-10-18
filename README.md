@@ -17,9 +17,44 @@ Currently, other features included in this application include deletion of posts
 
 **Link to project:** https://diagnose.up.railway.app/
 
+If you just want to try out the app, use these credentials email: demo@demo.com password: demodemo
+
 <p align="center">
      <img src="public/assets/img/screenshot.png">
 </p>
+
+
+## Optimizations
+
+This program works, however in the future it would be great to:
+
+-Add the ability to edit and delete comments.
+
+-Ability to unbookmark a post.
+
+-Being able to post a profile picture and displaying it in your profile page and beside username.
+
+-Ability to post more than one photo of case.
+
+-Ability to share a link to a particular case.
+
+-Personalize userpage more by including work experience and education. 
+
+-Add a search capability to find users, cases, and comments.
+
+-Provide medical students ability to make accounts (for educational purposes) and differentiate their accounts from medical experts.
+
+-Add a "similar cases" section in the posts page.
+
+-Ability to reply to specific comments and creating a thread for it.
+
+## Lessons Learned:
+
+- Learned how the controller communicates with the database by pulling out the information I requested and how to display that information into the ejs template by passing it into the render.
+
+- Learned about the amazing populate() function which replaces the specific path in the documents with documents from other collections.
+
+- Learned about how you can format the display of your dates using moment.
 
 ## Install
 
@@ -41,12 +76,3 @@ Add an .env file:
 Run:
 
 `npm start`
-
-## Optimizations
-*(optional)*
-
-You don't have to include this section but interviewers *love* that you can not only deliver a final product that looks great but also functions efficiently. Did you write something then refactor it later and the result was 5x faster than the original implementation? Did you cache your assets? Things that you write in this section are **GREAT** to bring up in interviews and you can use this section as reference when studying for technical interviews!
-
-## Lessons Learned:
-
-No matter what your experience level, being an engineer means continuously learning. Every time you build something you always have those *whoa this is awesome* or *fuck yeah I did it!* moments. This is where you should share those moments! Recruiters and interviewers love to see that you're self-aware and passionate about growing.
