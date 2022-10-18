@@ -6,10 +6,6 @@
 
 <br>
 
-# Diagnose
-
-**Link to project:** https://diagnose.up.railway.app/
-
 [Diagnose](https://diagnose.up.railway.app/) is a full-stack application built using Express.js as a backend framework, MongoDB as a database, Node.js as a backend JavaScript runtime environment, and EJS as a template language to generate HTML markup. 
 
 The web application is meant for medical experts to share images of particular cases they would like to initiate discussions on with other medical experts. The website can be described in three simple steps:
@@ -19,17 +15,19 @@ The web application is meant for medical experts to share images of particular c
 
 Currently, other features included in this application include deletion of posts, liking posts, bookmarking posts, and visiting user profiles. 
 
+**Link to project:** https://diagnose.up.railway.app/
+
 <p align="center">
-     <img src="assets/img/screenshot.png" width="50%" height="50%">
+     <img src="public/assets/img/screenshot.png" width="50%" height="50%">
 </p>
 
-# Install
+## Install
 
 `npm install`
 
 ---
 
-# Things to add
+### Things to add
 
 - Create a `.env` file in config folder and add the following as `key = value`
   - PORT = 2121 (can be any port example: 3000)
@@ -40,7 +38,7 @@ Currently, other features included in this application include deletion of posts
 
 ---
 
-# Run
+### Run
 
 `npm start`
 
