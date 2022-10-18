@@ -1,113 +1,54 @@
-<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
-<a name="readme-top"></a>
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Don't forget to give the project a star!
-*** Thanks again! Now go create something AMAZING! :D
--->
+<br>
 
+<p align="center">
+     <img src="assets/img/logo.png" width="30%" height="30%">
+</p>
 
+<br>
 
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
+# Diagnose
 
+**Link to project:** https://diagnose.up.railway.app/
 
+[Diagnose](https://diagnose.up.railway.app/) is a full-stack application built using Express.js as a backend framework, MongoDB as a database, Node.js as a backend JavaScript runtime environment, and EJS as a template language to generate HTML markup. 
 
-<!-- PROJECT LOGO -->
-<br />
-<div align="center">
-  <a href="https://github.com/rsnr-code/diagnose">
-    <img src="/assets/img/logo.png" alt="Logo" width="80" height="80">
-  </a>
+The web application is meant for medical experts to share images of particular cases they would like to initiate discussions on with other medical experts. The website can be described in three simple steps:
+  1. Create an account. 
+  2. Post an image of your case with detailed description.
+  3. Join the discussion by commenting.
 
-<h3 align="center">DIAGNOSE</h3>
+Currently, other features included in this application include deletion of posts, liking posts, bookmarking posts, and visiting user profiles. 
 
-  <p align="center">
-    Join the worldwide community of medical experts working together for a better future!
-    <br />
-    <a href="https://github.com/rsnr-code/diagnose"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://diagnose.up.railway.app/">View Demo</a>
-    ·
-    <a href="https://github.com/rsnr-code/diagnose/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/rsnr-code/diagnose/issues">Request Feature</a>
-  </p>
-</div>
+<p align="center">
+     <img src="assets/img/screenshot.png" width="50%" height="50%">
+</p>
 
+# Install
 
+`npm install`
 
-<!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
-  </ol>
-</details>
+---
 
+# Things to add
 
+- Create a `.env` file in config folder and add the following as `key = value`
+  - PORT = 2121 (can be any port example: 3000)
+  - DB_STRING = `your database URI`
+  - CLOUD_NAME = `your cloudinary cloud name`
+  - API_KEY = `your cloudinary api key`
+  - API_SECRET = `your cloudinary api secret`
 
-<!-- ABOUT THE PROJECT -->
-## About The Project
+---
 
-<img src="/assets/img/screenshot.png" alt="example">
+# Run
 
+`npm start`
 
-<!-- GETTING STARTED -->
-## Getting Started
+## Optimizations
+*(optional)*
 
+You don't have to include this section but interviewers *love* that you can not only deliver a final product that looks great but also functions efficiently. Did you write something then refactor it later and the result was 5x faster than the original implementation? Did you cache your assets? Things that you write in this section are **GREAT** to bring up in interviews and you can use this section as reference when studying for technical interviews!
 
+## Lessons Learned:
 
-### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
-
-### Installation
-
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/github_username/repo_name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
+No matter what your experience level, being an engineer means continuously learning. Every time you build something you always have those *whoa this is awesome* or *fuck yeah I did it!* moments. This is where you should share those moments! Recruiters and interviewers love to see that you're self-aware and passionate about growing.
