@@ -13,7 +13,7 @@ The web application is meant for medical experts to share images of particular c
   2. Post an image of your case with detailed description.
   3. Join the discussion by commenting.
 
-Currently, other features included in this application include deletion of posts, liking posts, bookmarking posts, and visiting user profiles. 
+Currently, other features in this application include deletion of posts, liking posts, bookmarking posts, and visiting user profiles. 
 
 **Link to project:** https://diagnose.up.railway.app/
 
@@ -28,25 +28,25 @@ If you just want to try out the app, use these credentials email: demo@demo.com 
 
 This program works, however in the future it would be great to:
 
--Add the ability to edit and delete comments.
+- Add the ability to edit and delete comments.
 
--Ability to unbookmark a post.
+- Ability to unbookmark a post.
 
--Being able to post a profile picture and displaying it in your profile page and beside username.
+- Being able to post a profile picture and displaying it in your profile page and beside username.
 
--Ability to post more than one photo of case.
+- Ability to post more than one photo of case.
 
--Ability to share a link to a particular case.
+- Ability to share a link to a particular case.
 
--Personalize userpage more by including work experience and education. 
+- Personalize userpage more by including work experience and education. 
 
--Add a search capability to find users, cases, and comments.
+- Add a search capability to find users, cases, and comments.
 
--Provide medical students ability to make accounts (for educational purposes) and differentiate their accounts from medical experts.
+- Provide medical students ability to make accounts (for educational purposes) and differentiate their accounts from medical experts.
 
--Add a "similar cases" section in the posts page.
+- Add a "similar cases" section in the posts page.
 
--Ability to reply to specific comments and creating a thread for it.
+- Ability to reply to specific comments and creating a thread for it.
 
 ## Lessons Learned:
 
