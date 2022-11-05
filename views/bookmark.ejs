@@ -4,6 +4,7 @@
     <div class="row justify-content-center mt-5 mx-auto">
       <ul class="row list-unstyled">
         <% for(let i=0; i<bookmarks.length; i++) {%>
+          <% if(bookmarks[i].post){ %>
           <li class="col-6 justify-content-between mt-5">
             <div class="card text-center" style="max-width: 401px;">
 
@@ -17,6 +18,7 @@
              
               </div>
           </li>
+        <% } %>
         <% } %>
         </ul>
 
