@@ -6,7 +6,7 @@
 
 <br>
 
-[Diagnose](https://diagnose.up.railway.app/) is a full-stack application built using Node.js as a backend JavaScript runtime environment, Express.js as a backend framework, MongoDB as a database, and EJS as a template language to generate HTML markup. 
+[Diagnose](https://diagnoseapp.herokuapp.com/) is a full-stack application built using Node.js as a backend JavaScript runtime environment, Express.js as a backend framework, MongoDB as a database, and EJS as a template language to generate HTML markup. 
 
 The web application is meant for medical experts to share images of particular cases they would like to initiate discussions on with other medical experts. The website can be described in three simple steps:
   1. Create an account. 
@@ -15,7 +15,7 @@ The web application is meant for medical experts to share images of particular c
 
 Currently, other features in this application include deletion of posts, liking posts, bookmarking posts, and visiting user profiles. 
 
-**Link to project:** https://diagnose.up.railway.app/
+**Link to project:** https://diagnoseapp.herokuapp.com/
 
 If you just want to try out the app, use these credentials email: demo@demo.com password: demodemo
 
